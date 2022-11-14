@@ -1,0 +1,8 @@
+why did we move from Context API to Redux? 
+
+Redux was a revolutionary technology in React ecosystem. It allowed us to create a global “vault” with immutable data and fixed the prop drilling problem in our component tree. It is still a great tool for sharing immutable data in the application , which additionally scales well. Though context API povide bettte approach to manage the gllobal state in reactjs, the problem with context API is does not have single store, which will be challnaging to managed state in more complex application. Also, Context API is designed as a dependency injection mechanism that allows making data available through the component tree without being manually passed.
+This is where redux thrive. Redux provides a solution by ensuring that:
+
+Your state is wrapped in a store which handles all updates and notifies all code that subscribes to the store of updates to the state. You don’t need to pass state through an entire component tree anymore but can subscribe to these changes much closer to where the information is needed.
+All changes are made sequentially to ensure a predictable end result free from unexpected effects and race conditions.
+The state is immutable, meaning that every change in state results in a totally new version of the state, enabling us to write more predictable code or go and look at any previous version of the state through the Redux developer tooling. This leads to an incredible debug experience.
